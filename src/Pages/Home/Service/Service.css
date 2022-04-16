@@ -1,0 +1,23 @@
+.service{
+      border: 1px solid rgba(0, 0, 0, 0.334);
+      border-radius: 10px;
+      padding-left: 10px;
+      text-align: center;
+      
+      
+}
+.service-name{
+      color: rgb(57, 189, 57);
+}
+.price{
+      color: rgb(33, 33, 228);
+}
+.description{
+      color: rgb(124, 20, 220);
+}
+.button{
+      background-color: blue;
+      color: #ddd;
+      width: 200px;
+      border-radius: 5px;
+}
