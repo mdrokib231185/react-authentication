@@ -1,0 +1,20 @@
+[
+      {
+            "id":1,
+            "name": "Bbc Food",
+            "price": "300",
+            "img": "https://i.ibb.co/Ks3g4mF/image1.png"
+      },
+      {
+            "id":3,
+            "name": "Chicken food",
+            "price": "400",
+            "img": "https://i.ibb.co/bNwKw0S/image2.png"
+      },
+      {
+            "id":2,
+            "name": "Salat",
+            "price": "300",
+            "img": "https://i.ibb.co/RpN8MsX/image4.png"
+      }
+]
