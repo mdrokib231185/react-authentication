@@ -1,0 +1,25 @@
+.test-img{
+      height: 500px;
+      width: 500px;
+}
+.testimonial-text{
+      color: rgb(113, 226, 14);
+      font-size: 50px;
+}
+.title-text{
+      font-size: 60px;
+      color: green;
+}
+.happy-text1{
+      color: rgb(49, 49, 213);
+}
+.details{
+      color: rgb(36, 186, 31);
+      font-size: 30px;
+}
+.testimonial-container{
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      margin-top: 30px;
+
+}
