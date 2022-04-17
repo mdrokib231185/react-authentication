@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import logo from '../../images/logo 3.png'
+import logo from '../../images/teet2.png'
 import './Header.css'
 import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -25,7 +25,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand as={Link} to="/home">
-            {/* <img style={{ height: 60, width: 200 }} src={logo} alt="" /> */}
+            <img style={{ height: 60, width: 200 }} src={logo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -42,12 +42,19 @@ const Header = () => {
               <Nav.Link as={Link} to="/blog">
                 Blogs
               </Nav.Link>
-              {user ?
-                <button onClick={handelSignOut} className='btn btn-primary'
-                id='signout-btn'>Sign Out</button>
-                :<Nav.Link as={Link} to="/login">
-                Login
-              </Nav.Link>}
+              {user ? (
+                <button
+                  onClick={handelSignOut}
+                  className="btn btn-primary"
+                  id="signout-btn"
+                >
+                  Sign Out
+                </button>
+              ) : (
+                <Nav.Link as={Link} to="/login">
+                  Login
+                </Nav.Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
