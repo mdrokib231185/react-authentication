@@ -3,14 +3,19 @@ import { Button, Form } from "react-bootstrap";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import Social from "../SocialLogin/Social";
 import "./Register.css";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
 import auth from "../../../Firebase.init";
-
-
+import { sendEmailVerification } from "firebase/auth";
 
 const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+  const [updateProfile, updating, UpDateError] = useUpdateProfile(auth);
+
   const Navigate = useNavigate();
 
   const handelSubmit = (event) => {
@@ -19,12 +24,12 @@ const Register = () => {
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-    console.log(email, password,name)
+    console.log(email, password, name);
 
     createUserWithEmailAndPassword(email, password);
   };
   if (user) {
-    Navigate('/home')
+    Navigate("/home");
   }
 
   return (
