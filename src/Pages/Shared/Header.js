@@ -25,7 +25,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand as={Link} to="/home">
-            <img style={{ height: 60, width: 200 }} src={logo} alt="" />
+            <h1 className='site-name'>Teeth Care</h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
